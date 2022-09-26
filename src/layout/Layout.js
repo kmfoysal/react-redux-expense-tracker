@@ -1,9 +1,10 @@
 import React from 'react';
+import AllTransactionList from '../components/allTransactionList/AllTransactionList';
 import BalanceStatus from '../components/balanceStatus/BalanceStatus';
-import EarningStatus from '../components/earningStatus/EarningStatus';
 import TransectionForm from '../components/transectionForm/TransectionForm';
 
 const Layout = () => {
+  
     return (
       <div className="App">
         <div className="header">
@@ -13,16 +14,19 @@ const Layout = () => {
         <div className="main">
           <div className="container">
             <BalanceStatus />
+
             <TransectionForm />
 
             <p className="second_heading">Your Transactions:</p>
 
-            <EarningStatus />
-            
+            <AllTransactionList />
+
           </div>
         </div>
 
-        <div className="footer">&copy; 2022 K.M Foysal | All Right Reserved.</div>
+        <div className="footer">
+          &copy; 2022 K.M Foysal | All Right Reserved.
+        </div>
       </div>
     );
 };

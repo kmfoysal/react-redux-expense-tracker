@@ -11,9 +11,11 @@ export const getTransactions = async () => {
 
 
 export const addTransactions = async (data) => {
+
   const response = await axiosInstance.post("/transactions", data);
 
   return response.data;
+  
 };
 
 

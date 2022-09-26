@@ -25,7 +25,7 @@ const TransectionForm = () => {
   }
 
     return (
-      <div>
+      <div className='form'>
         <h3>Add new transaction</h3>
 
         <form onSubmit={handleForm}>
@@ -84,7 +84,7 @@ const TransectionForm = () => {
           </button>
         </form>
 
-        {isError && !isLoading && <p>{error}</p>}
+        {isError && !isLoading && <p className='error'>{error}</p>}
       </div>
     );
 };
