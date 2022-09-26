@@ -22,7 +22,7 @@ const Layout = () => {
           </div>
         </div>
 
-        <div class="footer">&copy;2022 Learn with Sumit</div>
+        <div class="footer">&copy; 2022 K.M Foysal | All Right Reserved.</div>
       </div>
     );
 };
