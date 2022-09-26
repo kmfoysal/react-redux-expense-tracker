@@ -5,24 +5,24 @@ import TransectionForm from '../components/transectionForm/TransectionForm';
 
 const Layout = () => {
     return (
-      <div class="App">
-        <div class="header">
+      <div className="App">
+        <div className="header">
           <h1>Expense Tracker</h1>
         </div>
 
-        <div class="main">
-          <div class="container">
+        <div className="main">
+          <div className="container">
             <BalanceStatus />
             <TransectionForm />
 
-            <p class="second_heading">Your Transactions:</p>
+            <p className="second_heading">Your Transactions:</p>
 
             <EarningStatus />
             
           </div>
         </div>
 
-        <div class="footer">&copy; 2022 K.M Foysal | All Right Reserved.</div>
+        <div className="footer">&copy; 2022 K.M Foysal | All Right Reserved.</div>
       </div>
     );
 };
