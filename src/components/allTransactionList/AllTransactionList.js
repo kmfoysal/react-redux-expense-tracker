@@ -1,12 +1,21 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTransactions } from '../../features/transaction/transactionSlice';
 import TransactionList from '../transactionList/TransactionList';
 
 const AllTransactionList = () => {
 
+    const dispatch = useDispatch();
+
     const { transactions, isLoading, isError, error } = useSelector(
       (state) => state.transactions
     );
+
+    useEffect(()=>{
+
+      dispatch(fetchTransactions())
+
+    },[dispatch])
 
 
     let content = null;
