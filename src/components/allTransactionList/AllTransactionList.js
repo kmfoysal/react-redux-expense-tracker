@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link, useLocation } from 'react-router-dom';
 import { fetchTransactions } from '../../features/transaction/transactionSlice';
 import TransactionList from '../transactionList/TransactionList';
 
 const AllTransactionList = () => {
 
     const dispatch = useDispatch();
+
+    const location = useLocation();
+
 
     const { transactions, isLoading, isError, error } = useSelector(
       (state) => state.transactions
@@ -30,10 +34,23 @@ const AllTransactionList = () => {
         content = <p>{error}</p>
     }
 
-    if (!isLoading && !isError && transactions?.length > 0) {
-      content = transactions.map((transaction) => (
+    if (!isLoading && !isError && transactions?.length > 0 && location.pathname === '/') {
+      content = transactions.slice(-5).map((transaction) => (
         <TransactionList key={transaction.id} transaction={transaction} />
-      ));
+      )).reverse()
+    }
+
+
+    if (
+      !isLoading &&
+      !isError &&
+      transactions?.length > 0 &&
+      location.pathname === "/allTransactions"
+    ) {
+      content = transactions
+        .map((transaction) => (
+          <TransactionList key={transaction.id} transaction={transaction} />
+        ))
     }
 
 
@@ -45,6 +62,12 @@ const AllTransactionList = () => {
     return (
       <div className="conatiner_of_list_of_transactions">
         <ul>{content}</ul>
+
+        {location.pathname === "/" && (
+          <Link to="/allTransactions">
+            <button className="btn">View All</button>
+          </Link>
+        )}
       </div>
     );
 };

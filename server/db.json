@@ -13,10 +13,28 @@
       "id": 7
     },
     {
-      "name": "Tea",
+      "name": "House Rent",
       "type": "expense",
-      "amount": 59,
-      "id": 9
+      "amount": 9500,
+      "id": 10
+    },
+    {
+      "name": "Cigarette",
+      "type": "expense",
+      "amount": 3000,
+      "id": 11
+    },
+    {
+      "name": "Income from fiver",
+      "type": "income",
+      "amount": 15000,
+      "id": 12
+    },
+    {
+      "name": "My Expenses",
+      "type": "expense",
+      "amount": 50,
+      "id": 13
     }
   ]
 }

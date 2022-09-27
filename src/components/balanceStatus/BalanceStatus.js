@@ -1,30 +1,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import getCalculations from '../../utils/getCalculations';
 
 const BalanceStatus = () => {
 
   const {transactions} = useSelector((state)=>state.transactions)
-
-  const getCalculations = (transactions) => {
-
-    let income = 0;
-
-    let expense = 0;
-
-    transactions.forEach((transaction) => {
-
-      const { type, amount } = transaction;
-
-      if (type === "income") {
-        income += amount;
-      }else if (type === "expense") {
-        expense += amount;
-      }
-
-    });
-
-    return { income, expense };
-  };
 
 
   const values = getCalculations(transactions);

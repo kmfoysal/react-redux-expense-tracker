@@ -1,14 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Layout from './layout/Layout';
+import AllTransactions from './pages/allTransactions/AllTransactions';
 
 function App() {
   return (
-    <div >
-
-        <Layout />
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Layout />}/>
+        <Route path='/allTransactions' element={<AllTransactions />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
