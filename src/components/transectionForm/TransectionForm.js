@@ -136,7 +136,7 @@ const TransectionForm = () => {
         </button>
       </form>
 
-      <button class="btn cancel_edit" onClick={handleCancel}>
+      <button className="btn cancel_edit" onClick={handleCancel}>
         Cancel
       </button>
 

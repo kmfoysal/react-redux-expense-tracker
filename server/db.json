@@ -7,10 +7,22 @@
       "id": 1
     },
     {
-      "name": "My Expenses",
-      "type": "expense",
-      "amount": "500",
+      "name": "My Tips",
+      "type": "income",
+      "amount": "300",
       "id": 2
+    },
+    {
+      "name": "Bus fare",
+      "type": "expense",
+      "amount": 40,
+      "id": 3
+    },
+    {
+      "name": "Sunglass Purchase",
+      "type": "expense",
+      "amount": 1200,
+      "id": 4
     }
   ]
 }
